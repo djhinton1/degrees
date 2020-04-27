@@ -90,6 +90,8 @@ def shortest_path(source, target):
     that connect the source to the target.
 
     If no possible path, returns None.
+
+    Going to want to use a queue for the frontier.
     """
 
     # TODO
