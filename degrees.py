@@ -94,8 +94,12 @@ def shortest_path(source, target):
     Going to want to use a queue for the frontier.
     """
 
+    path = list()
+    frontier = QueueFrontier()
+
     # TODO
-    raise NotImplementedError
+    return path
+    
 
 
 def person_id_for_name(name):
