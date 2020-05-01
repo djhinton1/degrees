@@ -111,12 +111,14 @@ def shortest_path(source, target):
 
         # if this was the target, then we have found a solution
         if node.state == target:
-
-
-
-
+            # need to build out the actions (movies) it took for us to get here
+            None
 
     return 
+
+
+
+     
     
 def person_id_for_name(name):
     """
