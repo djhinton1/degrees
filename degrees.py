@@ -51,7 +51,6 @@ def load_data(directory):
             except KeyError:
                 pass
 
-
 def main():
     if len(sys.argv) > 2:
         sys.exit("Usage: python degrees.py [directory]")
@@ -83,7 +82,6 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-
 def shortest_path(source, target):
     """
     Returns the shortest list of (movie_id, person_id) pairs
@@ -94,14 +92,32 @@ def shortest_path(source, target):
     Going to want to use a queue for the frontier.
     """
 
-    path = list()
+    # initialize the necessary variables 
+    start = Node(state=source, parent=None, action=None)
     frontier = QueueFrontier()
+    frontier.add(start)
 
-    # TODO
-    return path
+    # initalize an explored set
+    explored = set()
+
+    while True:
+
+        # no other movies left to explore
+        if frontier.empty():
+            raise Exception("no solution")
+
+        # remove a node from the frontier
+        node = frontier.remove()
+
+        # if this was the target, then we have found a solution
+        if node.state == target:
+
+
+
+
+
+    return 
     
-
-
 def person_id_for_name(name):
     """
     Returns the IMDB id for a person's name,
